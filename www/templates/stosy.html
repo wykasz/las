@@ -1,0 +1,14 @@
+<ion-view title="Stosy" id="page9">
+    <ion-content padding="true" class="has-header">
+     	<div ng-controller="stosyCtrl as list">
+			<div id="dodawanieKD-button-bar3" class="button-bar" ng-repeat="message in list.stosy">
+				<div style="width: 750%">
+				<button class="button button-stable  button-block" ng-click="">{{ message.text }} [{{ message.count }} sztuki]</button>
+				</div>
+				<button class="rwkbutton2 button button-balanced  button-block " ng-click="inc({{ message.id }})">+</button>
+				<button class="button button-assertive  button-block rwkbutton2" ng-click="dec({{ message.id }})">-</button>
+				
+			</div>
+		</div>
+    </ion-content>
+</ion-view>

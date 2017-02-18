@@ -1,0 +1,13 @@
+<ion-view title="Kłody" id="page8">
+    <ion-content padding="true" class="has-header" id="patitolos">
+		<div ng-controller="kOdyCtrl as list">
+			<div id="dodawanieKD-button-bar3" class="button-bar" ng-repeat="message in list.klody">
+				<div style="width: 85%">
+				<button class="button button-stable  button-block" ng-click="">{{ message.text }} [{{ message.count }} sztuki]</button>
+				</div>
+				<button class="button button-balanced  button-block" ng-click="inc('{{ message.key }}')">+</button>
+				<button class="button button-assertive  button-block" ng-click="dec('{{ message.key }}')">-</button>
+			</div>
+		</div>
+    </ion-content>
+</ion-view>
